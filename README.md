@@ -1,2 +1,5 @@
-# 2nees-design-pattern-tutorial-example
-Design Pattern Tutorial Example
+<h1 dir="rtl">الأمثلة الخاصة بدورة ال Design Pattern</h1>
+
+<p dir="rtl">
+ستجد هنا الأمثلة الخاصة بال Design Patterns والتي تم التطرق لها في الدورة المعنونة ب Design Patterns باللغة العربية والمقدمة من قبل أنيس حكمت أبو حميد  
+</p>
