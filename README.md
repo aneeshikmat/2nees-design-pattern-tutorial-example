@@ -14,6 +14,9 @@
     <li>
       <a href="creational-factory-method.php">مثال عن ال Factory Method</a>
     </li>
+    <li>
+      <a href="creational-abstract-factory.php">مثال عن ال Abstract Factory</a>
+    </li>
   </ul>
 </div>
 
