@@ -20,7 +20,9 @@
     <li>
       <a href="creational-builder-1.php">مثال عن ال Builder</a>
 ||
-      <a href="creational-builder-1.php">مثال عن ال Builder 2</a>
+      <a href="creational-builder-2.php">مثال عن ال Builder 2</a>
+||
+      <a href="creational-builder-3.php">مثال عن ال Builder 3</a>
     </li>
   </ul>
 </div>
