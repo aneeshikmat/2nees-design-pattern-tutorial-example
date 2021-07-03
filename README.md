@@ -17,6 +17,11 @@
     <li>
       <a href="creational-abstract-factory.php">مثال عن ال Abstract Factory</a>
     </li>
+    <li>
+      <a href="creational-builder-1.php">مثال عن ال Builder</a>
+||
+      <a href="creational-builder-1.php">مثال عن ال Builder 2</a>
+    </li>
   </ul>
 </div>
 
