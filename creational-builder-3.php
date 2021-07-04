@@ -80,7 +80,7 @@ class PostgresBuilder extends MysqlBuilder
 }
 
 $mysql = new MysqlBuilder();
-echo $mysql->insert("users", ["Anees", "aneeshikmat@2nees.com", "30"])->buildSql() . PHP_EOL;
+echo $mysql->insert("users", ["'Anees'", "'aneeshikmat@2nees.com'", "30"])->buildSql() . PHP_EOL;
 echo $mysql->select("users", ["name", "email", "age"])
     ->where("age > 18")
     ->where("name LIKE '%Anees%'")
@@ -90,7 +90,7 @@ echo $mysql->select("users", ["name", "email", "age"])
 echo PHP_EOL . "=========================================" . PHP_EOL;
 
 $postgres = new PostgresBuilder();
-echo $mysql->insert("users", ["Anees", "aneeshikmat@2nees.com", "30"])->buildSql() . PHP_EOL;
+echo $mysql->insert("users", ["'Anees'", "'aneeshikmat@2nees.com'", "30"])->buildSql() . PHP_EOL;
 echo $postgres->select("users", ["name", "email", "age"])
     ->where("age > 18")
     ->where("name LIKE '%Anees%'")
