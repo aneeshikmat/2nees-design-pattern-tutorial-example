@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * This is Builder interface
+ * 2nees.com
+ */
 interface SQLQueryBuilder
 {
     public function select(string $table, array $fields): SQLQueryBuilder;
@@ -13,6 +17,10 @@ interface SQLQueryBuilder
     public function buildSql(): string;
 }
 
+/**
+ * This is Concrete Builder
+ * 2nees.com
+ */
 class MysqlBuilder implements SQLQueryBuilder
 {
     protected stdClass $query;
@@ -69,6 +77,10 @@ class MysqlBuilder implements SQLQueryBuilder
     }
 }
 
+/**
+ * This is Concrete Builder
+ * 2nees.com
+ */
 class PostgresBuilder extends MysqlBuilder
 {
     public function limit(int $start, int $offset): SQLQueryBuilder
@@ -79,6 +91,9 @@ class PostgresBuilder extends MysqlBuilder
     }
 }
 
+/**
+ * Use Builders
+ */
 $mysql = new MysqlBuilder();
 echo $mysql->insert("users", ["'Anees'", "'aneeshikmat@2nees.com'", "30"])->buildSql() . PHP_EOL;
 echo $mysql->select("users", ["name", "email", "age"])
@@ -90,7 +105,7 @@ echo $mysql->select("users", ["name", "email", "age"])
 echo PHP_EOL . "=========================================" . PHP_EOL;
 
 $postgres = new PostgresBuilder();
-echo $mysql->insert("users", ["'Anees'", "'aneeshikmat@2nees.com'", "30"])->buildSql() . PHP_EOL;
+echo $postgres->insert("users", ["'Anees'", "'aneeshikmat@2nees.com'", "30"])->buildSql() . PHP_EOL;
 echo $postgres->select("users", ["name", "email", "age"])
     ->where("age > 18")
     ->where("name LIKE '%Anees%'")

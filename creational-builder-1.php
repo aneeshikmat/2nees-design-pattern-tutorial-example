@@ -23,6 +23,11 @@ interface HouseBuilderInterface
     public function getResult();
 }
 
+/**
+ * Simple Abstract Class to share common data between Products
+ * Note: its just for example, so that no setter or getter...etc
+ * 2nees.com
+ */
 abstract class HouseAbstracts {
     public $wall;
     public $roof;
@@ -34,6 +39,10 @@ abstract class HouseAbstracts {
     public abstract function buildHome() : void;
 }
 
+/**
+ * This is Product, not require to follow the builder interface in all result
+ * 2nees.com
+ */
 class House extends HouseAbstracts {
     public function buildHome(): void
     {
@@ -45,6 +54,10 @@ class House extends HouseAbstracts {
     }
 }
 
+/**
+ * This is Product, not require to follow the builder interface in all result
+ * 2nees.com
+ */
 class Castle extends HouseAbstracts {
     public function buildHome(): void
     {
@@ -58,6 +71,10 @@ class Castle extends HouseAbstracts {
     }
 }
 
+/**
+ * This is Concrete Builder
+ * 2nees.com
+ */
 class HouseBuilder implements HouseBuilderInterface {
 
     private House $house;
@@ -111,6 +128,10 @@ class HouseBuilder implements HouseBuilderInterface {
     }
 }
 
+/**
+ * This is Concrete Builder
+ * 2nees.com
+ */
 class CastleBuilder implements HouseBuilderInterface {
 
     private Castle $castle;
@@ -164,6 +185,10 @@ class CastleBuilder implements HouseBuilderInterface {
     }
 }
 
+/**
+ * This is a Director Class which its execute the building steps in particular sequence
+ * 2nees.com
+ */
 class Director
 {
     private HouseBuilderInterface $builder;
@@ -184,6 +209,10 @@ class Director
     }
 }
 
+/**
+ * Client code, simulate to build castel and home
+ * 2nees.com
+ */
 $director = new Director();
 $homeBuilder = new HouseBuilder();
 $director->setBuilder($homeBuilder);

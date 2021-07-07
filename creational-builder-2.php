@@ -21,6 +21,10 @@ interface HouseBuilderInterface2
     public function getResult();
 }
 
+/**
+ * This is Product, not require to follow the builder interface in all result
+ * 2nees.com
+ */
 class House2 {
     public $wall;
     public $roof;
@@ -41,6 +45,10 @@ class House2 {
     }
 }
 
+/**
+ * This is Concrete Builder
+ * 2nees.com
+ */
 class HouseBuilder2 implements HouseBuilderInterface2 {
 
     private House2 $house;
@@ -94,6 +102,10 @@ class HouseBuilder2 implements HouseBuilderInterface2 {
     }
 }
 
+/**
+ * This is a Director Class which its execute the building steps in particular sequence
+ * 2nees.com
+ */
 class Director2
 {
     private HouseBuilderInterface2 $builder;
@@ -124,6 +136,10 @@ class Director2
     }
 }
 
+/**
+ * Client code, simulate to build castel and home
+ * 2nees.com
+ */
 $director = new Director2();
 $homeBuilder = new HouseBuilder2();
 $director->setBuilder($homeBuilder);
