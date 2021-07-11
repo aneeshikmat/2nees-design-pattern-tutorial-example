@@ -29,6 +29,9 @@
 ||
       <a href="creational-prototype-2.php">مثال عن ال Prototype 2</a>
     </li>
+    <li>
+      <a href="creational-singleton.php">مثال عن ال Singleton</a>
+    </li>
   </ul>
 </div>
 
