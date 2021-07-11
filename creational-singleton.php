@@ -2,6 +2,7 @@
 
 /**
  * Class DatabaseConfig
+ * 2nees.com
  */
 class DatabaseConfig {
     private static string $host;
