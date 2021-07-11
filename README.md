@@ -26,6 +26,8 @@
     </li>
     <li>
       <a href="creational-prototype.php">مثال عن ال Prototype</a>
+||
+      <a href="creational-prototype-2.php">مثال عن ال Prototype 2</a>
     </li>
   </ul>
 </div>

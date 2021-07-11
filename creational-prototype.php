@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Class EmployeesPrototype
+ * 2nees.com
+ */
 class EmployeesPrototype
 {
     private string $name;
@@ -52,6 +56,10 @@ class EmployeesPrototype
     }
 }
 
+/**
+ * Class Salary
+ * 2nees.com
+ */
 class Salary {
     private float $salary;
     private float $tax;
@@ -73,6 +81,10 @@ class Salary {
     }
 }
 
+/**
+ * Class PrivilegesTypes
+ * 2nees.com
+ */
 class PrivilegesTypes {
     private array $privilegesTypes;
 
