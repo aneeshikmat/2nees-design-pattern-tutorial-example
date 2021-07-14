@@ -32,6 +32,9 @@
     <li>
       <a href="creational-singleton.php">مثال عن ال Singleton</a>
     </li>
+    <li>
+      <a href="structural-adapter.php">مثال عن ال Adapter</a>
+    </li>
   </ul>
 </div>
 
