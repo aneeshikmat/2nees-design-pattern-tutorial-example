@@ -4,9 +4,10 @@
  * 2nees.com
  */
 
-/**
- * Class SMSClient
- */
+/*
+* Client Interface
+* 2nees.com
+*/
 abstract class SMSClient
 {
     private string $number;
@@ -35,6 +36,9 @@ abstract class SMSClient
     abstract public function sendMessage();
 }
 
+/**
+ * Old Client Company
+ */
 class OldSMSCompany extends SMSClient
 {
     public function sendMessage()
@@ -43,6 +47,10 @@ class OldSMSCompany extends SMSClient
     }
 }
 
+/**
+ * This is Adaptee Class
+ * 2nees.com
+ */
 class NewSMSCompanyAdaptee
 {
     private string $connect;
@@ -74,6 +82,10 @@ class NewSMSCompanyAdaptee
     }
 }
 
+/**
+ * Adapter Class
+ * 2nees.com
+ */
 class NewSMSCompanyAdapter extends SMSClient {
     public function sendMessage()
     {
@@ -85,8 +97,8 @@ class NewSMSCompanyAdapter extends SMSClient {
 }
 
 // Company changed? Just update company class ^^, and keep your client code in loop as is.
-$sms = new OldSMSCompany();
-//$sms = new NewSMSCompanyAdapter();
+//$sms = new OldSMSCompany();
+$sms = new NewSMSCompanyAdapter();
 for ($i = 1; $i <= 5; $i++){
     $sms->setNumber("00962000{$i}");
     $sms->setMessage("SMS send from 2nees.com+{$i}");
