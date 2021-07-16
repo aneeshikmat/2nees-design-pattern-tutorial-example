@@ -48,7 +48,7 @@ class OldSMSCompany extends SMSClient
 }
 
 /**
- * This is Adaptee Class
+ * This is Adaptee Class (Service incompatible interface)
  * 2nees.com
  */
 class NewSMSCompanyAdaptee
