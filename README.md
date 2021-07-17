@@ -35,6 +35,9 @@
     <li>
       <a href="structural-adapter.php">مثال عن ال Adapter</a>
     </li>
+    <li>
+      <a href="structural-bridge.php">مثال عن ال Bridge</a>
+    </li>
   </ul>
 </div>
 
