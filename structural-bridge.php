@@ -6,7 +6,6 @@
 
 /**
  * Abstraction Part for handling one of two hierarchies of classes
- * Class Shape
  * 2nees.com
  */
 abstract class Shape
@@ -118,17 +117,20 @@ class Blue implements Color
     }
 }
 
+// Call Concrete Implementation To Passing it to Concrete Abstraction
 $redColor = new Red();
 $blueColor = new Blue();
 
+// Create Circle
 $myCircleShape = new Circle($redColor);
 $myCircleShape->shapeDetails();
-
+// Change Color on Run time
 $myCircleShape->changeColorRenderer($blueColor);
 $myCircleShape->shapeDetails();
 
+// Create Rect
 $myRectShape = new Rect($redColor);
 $myRectShape->shapeDetails();
-
+// Change Rect on Run time
 $myRectShape->changeColorRenderer($blueColor);
 $myRectShape->shapeDetails();
