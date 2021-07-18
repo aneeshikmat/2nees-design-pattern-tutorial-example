@@ -39,6 +39,8 @@
       <a href="structural-bridge.php">مثال عن ال Bridge</a>
 ||
       <a href="structural-bridge-2.php">مثال عن ال Bridge 2</a>
+||
+      <a href="structural-bridge-3.php">مثال عن ال Bridge 3</a>
     </li>
   </ul>
 </div>
