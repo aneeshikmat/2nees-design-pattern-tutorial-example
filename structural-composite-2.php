@@ -174,6 +174,7 @@ class Composite implements Family {
     }
 }
 
+// Simulate Client Data
 $aneesParent    = new FamilyMembers(
     1,
     "Anees",
@@ -216,11 +217,11 @@ $saed   = new FamilyMembers(
     new MemberDetails("Male", 28)
 );
 
-// First Composite
+// Prepare Data For Composite
 $aneesParent->addChildren($hikmat);
 $hikmat->addChildren($aneesChild);
 $hikmat->addChildren($taher);
-// Another Composite
+// Prepare Data For Composite
 $rasheedParent->addChildren($saed);
 
 // You can add as you want from members(leaf's), or create other composite to retrieve data or details as you want, here all data return
