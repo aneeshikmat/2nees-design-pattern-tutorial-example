@@ -1,6 +1,8 @@
 <?php
 /**
  * This example just to simulate how Composite can be work
+ * NOTE: This Example Not real example, its just to explan pattern component, if you understand current component,
+ ** you can go to more real example in structural-composite-2.php
  * 2nees.com
  */
 
@@ -19,21 +21,23 @@ interface OrderInterface {
 class OrderItems implements OrderInterface {
     private string $itemName;
     private string $itemID;
+    private OrderOwner $orderOwner;
 
     /**
      * OrderItems constructor.
      * @param string $itemName
      * @param string $itemID
      */
-    public function __construct(string $itemName, string $itemID)
+    public function __construct(string $itemName, string $itemID, $orderOwner)
     {
         $this->itemName = $itemName;
         $this->itemID = $itemID;
+        $this->orderOwner = $orderOwner;
     }
 
     public function render(): string
     {
-        return "{$this->itemID}: {$this->itemName}";
+        return "The {$this->orderOwner->render()} Buy: {$this->itemID}: {$this->itemName}";
     }
 }
 
@@ -99,18 +103,23 @@ class Composite implements OrderInterface {
 }
 
 $comp1 = new Composite();
-$comp1->addMember(new OrderItems("Car", 20));
-$comp1->addMember(new OrderOwner("Anees", 1234687));
+$comp1->addMember(new OrderItems("Car", 20, new OrderOwner("Anees", 1234687)));
 print_r($comp1->render());
 echo PHP_EOL . "==================================================" . PHP_EOL;
 
 $comp2 = new Composite();
-$comp2->addMember(new OrderItems("Bike", 15));
-$comp2->addMember(new OrderOwner("Taher", 66234));
+$comp2->addMember(new OrderItems("Bike", 15, new OrderOwner("Taher", 66234)));
 print_r($comp2->render());
 echo PHP_EOL. "==================================================" . PHP_EOL;
 
 $comp3  = new Composite();
 $comp3->addMember($comp1);
 $comp3->addMember($comp2);
+$comp3->addMember(new OrderItems("OOO", 15, new OrderOwner("&_&", 4123)));
+$comp3->addMember(new OrderItems("BBB", 16, new OrderOwner("0_)", 123)));
+$comp3->addMember(new OrderItems("AAA", 12, new OrderOwner("*_*", 1532)));
+print_r($comp3->render());
+
+echo PHP_EOL. "==================================================" . PHP_EOL;
+$comp3->removeMember($comp2);
 print_r($comp3->render());
