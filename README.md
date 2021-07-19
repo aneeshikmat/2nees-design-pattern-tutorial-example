@@ -42,6 +42,9 @@
 ||
       <a href="structural-bridge-3.php">مثال عن ال Bridge 3</a>
     </li>
+    <li>
+      <a href="structural-composite.php">مثال عن ال Composite</a>
+    </li>
   </ul>
 </div>
 
