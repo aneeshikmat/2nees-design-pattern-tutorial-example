@@ -44,6 +44,8 @@
     </li>
     <li>
       <a href="structural-composite.php">مثال عن ال Composite</a>
+||
+      <a href="structural-composite-2.php">مثال عن ال Composite 2</a>
     </li>
   </ul>
 </div>
