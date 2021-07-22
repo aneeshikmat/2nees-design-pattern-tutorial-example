@@ -68,7 +68,7 @@ class MultiLanguageWebsite extends WebsiteBaseDecorator {
             "Price" => $price,
             "Type" => "{$base['Type']} + MultiLanguage",
             "Options" => array_merge($base['Options'], ["HomePage-AR","ContactUs-AR", "AboutUS-AR", "ArLanguage"]),
-            "Description" => "Your looking to MultiLanguage Website and this is price is: {$price}$"
+            "Description" => "Your looking to Basic MultiLanguage Website and this is price is: {$price}$"
         ];
     }
 }
@@ -92,7 +92,7 @@ class ReportsDashboardWebsite extends WebsiteBaseDecorator {
             "Price" => $price,
             "Type" => "{$base['Type']} + AddReportsDashboard",
             "Options" => $options,
-            "Description" => "Your looking to MultiLanguage Website and this is price is: {$price}$"
+            "Description" => "Your looking to Basic Report Website and this is price is: {$price}$"
         ];
     }
 }
