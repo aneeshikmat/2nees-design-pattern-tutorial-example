@@ -1,6 +1,6 @@
 <?php
 /**
- * This example just to simulate how Composite can be work
+ * This example just to simulate how Decorator can be work
  * 2nees.com
  */
 
