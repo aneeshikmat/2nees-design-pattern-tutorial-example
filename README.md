@@ -50,6 +50,9 @@
     <li>
       <a href="structural-decorator.php">مثال عن ال Decorator</a>
     </li>
+    <li>
+      <a href="structural-facade.php">مثال عن ال Facade</a>
+    </li>
   </ul>
 </div>
 
