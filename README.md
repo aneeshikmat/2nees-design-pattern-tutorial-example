@@ -47,6 +47,11 @@
 ||
       <a href="structural-composite-2.php">مثال عن ال Composite 2</a>
     </li>
+    <li>
+      <a href="structural-decorator.php">مثال عن ال Decorator</a>
+||
+      <a href="structural-decorator.php">مثال عن ال Decorator 2</a>
+    </li>
   </ul>
 </div>
 
