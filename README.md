@@ -49,8 +49,6 @@
     </li>
     <li>
       <a href="structural-decorator.php">مثال عن ال Decorator</a>
-||
-      <a href="structural-decorator.php">مثال عن ال Decorator 2</a>
     </li>
   </ul>
 </div>

@@ -4,12 +4,17 @@
  * 2nees.com
  */
 
+/**
+ * Interface WebsiteComponent - Component
+ * 2nees.com
+ */
 interface WebsiteComponent {
     public function getDetails(): array;
 }
 
 /**
  * Class BasicWebsite - Concrete Component
+ * 2nees.com
  */
 class BasicWebsite implements WebsiteComponent {
     private float $price;
@@ -36,6 +41,7 @@ class BasicWebsite implements WebsiteComponent {
 
 /**
  * Class WebsiteBaseDecorator - Base Decorator
+ * 2nees.com
  */
 class WebsiteBaseDecorator implements WebsiteComponent {
     protected WebsiteComponent $websiteComponent;
@@ -57,6 +63,7 @@ class WebsiteBaseDecorator implements WebsiteComponent {
 
 /**
  * Class MultiLanguageWebsite - Concrete Decorators
+ * 2nees.com
  */
 class MultiLanguageWebsite extends WebsiteBaseDecorator {
     public function getDetails(): array
@@ -75,6 +82,7 @@ class MultiLanguageWebsite extends WebsiteBaseDecorator {
 
 /**
  * Class ReportsDashboardWebsite - Another Concrete Decorators
+ * 2nees.com
  */
 class ReportsDashboardWebsite extends WebsiteBaseDecorator {
     public function getDetails(): array
@@ -99,6 +107,7 @@ class ReportsDashboardWebsite extends WebsiteBaseDecorator {
 
 /**
  * Class DrupalWebsite - Another Concrete Decorators
+ * 2nees.com
  */
 class DrupalWebsite extends WebsiteBaseDecorator {
     public function getDetails(): array
@@ -117,6 +126,7 @@ class DrupalWebsite extends WebsiteBaseDecorator {
 
 /**
  * Class YiiWebsite - Another Concrete Decorators
+ * 2nees.com
  */
 class YiiWebsite extends WebsiteBaseDecorator {
     public function getDetails(): array
