@@ -97,3 +97,6 @@ echo "==================================================" . PHP_EOL;
 $facade = new SocialMediaFacade();
 $facade->setMessage("{$message} (We Are Using Facade Now)");
 $facade->share();
+echo "===================Send Again Its Easy===============================" . PHP_EOL;
+$facade->setMessage("Send Again Its Very Easy: {$message} (We Are Using Facade Now)");
+$facade->share();
