@@ -53,6 +53,9 @@
     <li>
       <a href="structural-facade.php">مثال عن ال Facade</a>
     </li>
+    <li>
+      <a href="structural-flyweight.php">مثال عن ال Flyweight</a>
+    </li>
   </ul>
 </div>
 
