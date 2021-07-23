@@ -82,6 +82,7 @@ class LinkedIn extends SocialMedia {
 // Client Script
 $message = "2nees.com Facade Design Pattern.";
 
+// Old Way (Before use Facade)
 $facebook = new Facebook();
 $facebook->setMessage($message);
 $facebook->share();
@@ -95,7 +96,7 @@ $linkedIn->setMessage($message);
 $linkedIn->share();
 
 echo "==================================================" . PHP_EOL;
-
+// New Way (After use Facade)
 $facade = new SocialMediaFacade(new Facebook(), new Twitter(), new LinkedIn());
 $facade->setMessage("{$message} (We Are Using Facade Now)");
 $facade->share();
