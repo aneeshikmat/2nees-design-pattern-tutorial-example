@@ -14,15 +14,12 @@ class SocialMediaFacade {
 
     /**
      * SocialMediaFacade constructor.
-     * @param Facebook $facebook
-     * @param Twitter $twitter
-     * @param LinkedIn $linkedIn
      */
-    public function __construct(Facebook $facebook, Twitter $twitter, LinkedIn $linkedIn)
+    public function __construct()
     {
-        $this->facebook = $facebook;
-        $this->twitter = $twitter;
-        $this->linkedIn = $linkedIn;
+        $this->facebook = new Facebook();
+        $this->twitter  = new Twitter();
+        $this->linkedIn = new LinkedIn();
     }
 
     /**
@@ -97,6 +94,6 @@ $linkedIn->share();
 
 echo "==================================================" . PHP_EOL;
 // New Way (After use Facade)
-$facade = new SocialMediaFacade(new Facebook(), new Twitter(), new LinkedIn());
+$facade = new SocialMediaFacade();
 $facade->setMessage("{$message} (We Are Using Facade Now)");
 $facade->share();
