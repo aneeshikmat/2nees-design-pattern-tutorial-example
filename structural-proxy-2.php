@@ -174,3 +174,6 @@ $txtFileBuilder = new TxtFileFactoryDirector();
 $txtFileBuilder->setBuilder(new TxtFile("2neesFile3-1"));
 $txtFileBuilder->buildFullAccessRole();
 $txtFileBuilder->buildReadAccessRole();
+
+// What is needed from above methods just to keep your thinking work, you can think how we can improve our code always
+// So that, may these methods not used in real world, or may you are create another thing, or a real factory method and so on...
