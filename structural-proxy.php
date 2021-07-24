@@ -4,6 +4,9 @@
  * 2nees.com
  */
 
+/**
+ * Interface TextFilesControl - The interface for original service and proxy
+ */
 interface TextFilesControl {
     public function read(): void;
     public function write(string $txt): void;
@@ -12,6 +15,9 @@ interface TextFilesControl {
     public function getFile();
 }
 
+/**
+ * Class TxtFile - Original Server which its a concrete implementation
+ */
 class TxtFile implements TextFilesControl {
     private $file;
     private string $fileName;
@@ -52,6 +58,9 @@ class TxtFile implements TextFilesControl {
     }
 }
 
+/**
+ * Class TxtFileProxy - This is the Proxy class which implements the same interface for Original Class
+ */
 class TxtFileProxy implements TextFilesControl {
     private TextFilesControl $textFilesControl;
     private int $role;
@@ -59,6 +68,7 @@ class TxtFileProxy implements TextFilesControl {
     /**
      * TxtFileProxy constructor.
      * @param TextFilesControl $textFilesControl
+     * @param int $role
      */
     public function __construct(TextFilesControl $textFilesControl, int $role)
     {
