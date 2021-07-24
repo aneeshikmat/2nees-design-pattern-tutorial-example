@@ -58,6 +58,10 @@
     </li>
     <li>
       <a href="structural-proxy.php">مثال عن ال Proxy</a>
+||
+      <a href="structural-proxy-2.php">مثال عن ال Proxy 2</a>
+||
+      <a href="structural-proxy-3.php">مثال عن ال Proxy 3</a>
     </li>
   </ul>
 </div>
