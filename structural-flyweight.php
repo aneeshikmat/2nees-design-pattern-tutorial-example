@@ -5,38 +5,6 @@
  */
 
 /**
- * Class GameLand - This is the Flyweight for client, which its return or represent data for client
- */
-class GameLand {
-    /**
-     * @var Tree[]
-     */
-    private array $trees;
-
-    /**
-     * @return array of Drawing data
-     */
-    public function draw(): array
-    {
-        return array_map(fn(Tree $tree) =>
-           $tree->draw()
-        , $this->trees);
-    }
-
-    /**
-     * @param $x
-     * @param $y
-     * @param $name
-     * @param $size
-     */
-    public function addTree($x, $y, $name, $size, $image): void
-    {
-        $treeType = TreeFactory::getTreeType($name, $size, $image);
-        $this->trees[] = new Tree($x, $y, $treeType);
-    }
-}
-
-/**
  * Class TreeType - This flyweight class which its contain a unique state
  ** When you look to this simulate its a big size in KB nested of B
  */
@@ -76,6 +44,31 @@ class TreeType {
 }
 
 /**
+ * Class TreeFactory - Flyweight factory which its used to create a flyweight object or re-use exists one
+ */
+class TreeFactory {
+    /**
+     * @var TreeType[]
+     */
+    private static array $treeTypes = [];
+
+    public static function getTreeType(string $name, string $size, string $image): TreeType
+    {
+        $key = md5($name.$size.$image);
+        if(!array_key_exists($key, self::$treeTypes)){
+            self::$treeTypes[$key] = new TreeType($name, $size, $image);
+        }
+
+        return self::$treeTypes[$key];
+    }
+
+    public static function getAllTreesType(): void {
+        echo "Total Count For Unique Object Saved on RAM: " . count(self::$treeTypes) . PHP_EOL;
+        print_r(array_map(fn(TreeType $treeType) => $treeType->draw(), self::$treeTypes));
+    }
+}
+
+/**
  * Class Tree - This is context which its create contextual Object, and you can create a lot and alot of these object
  ** and you will be safe since its too small...
  */
@@ -103,27 +96,34 @@ class Tree {
 }
 
 /**
- * Class TreeFactory - Flyweight factory which its used to create a flyweight object or re-use exists one
+ * Class GameLand - This is the Flyweight for client, which its return or represent data for client
  */
-class TreeFactory {
+class GameLand {
     /**
-     * @var TreeType[]
+     * @var Tree[]
      */
-    private static array $treeTypes = [];
+    private array $trees;
 
-    public static function getTreeType(string $name, string $size, string $image): TreeType
+    /**
+     * @return array of Drawing data
+     */
+    public function draw(): array
     {
-        $key = md5($name.$size.$image);
-        if(!array_key_exists($key, self::$treeTypes)){
-            self::$treeTypes[$key] = new TreeType($name, $size, $image);
-        }
-
-        return self::$treeTypes[$key];
+        return array_map(fn(Tree $tree) =>
+        $tree->draw()
+            , $this->trees);
     }
 
-    public static function getAllTreesType(): void {
-        echo "Total Count For Unique Object Saved on RAM: " . count(self::$treeTypes) . PHP_EOL;
-        print_r(array_map(fn(TreeType $treeType) => $treeType->draw(), self::$treeTypes));
+    /**
+     * @param $x
+     * @param $y
+     * @param $name
+     * @param $size
+     */
+    public function addTree($x, $y, $name, $size, $image): void
+    {
+        $treeType = TreeFactory::getTreeType($name, $size, $image);
+        $this->trees[] = new Tree($x, $y, $treeType);
     }
 }
 
