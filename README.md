@@ -63,6 +63,9 @@
 ||
       <a href="structural-proxy-3.php">مثال عن ال Proxy 3</a>
     </li>
+    <li>
+      <a href="behavioral-chain-of-responsibility.php">مثال عن ال Chain of Responsibility</a>
+    </li>
   </ul>
 </div>
 
