@@ -56,6 +56,9 @@
     <li>
       <a href="structural-flyweight.php">مثال عن ال Flyweight</a>
     </li>
+    <li>
+      <a href="structural-proxy.php">مثال عن ال Proxy</a>
+    </li>
   </ul>
 </div>
 
