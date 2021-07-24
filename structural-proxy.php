@@ -99,7 +99,7 @@ class TxtFileProxy implements TextFilesControl {
     {
         if(!$this->getFile()){
             $this->textFilesControl->open();
-            echo "File Open!" . PHP_EOL;
+            echo "File Open OR Created!" . PHP_EOL;
         }else {
             echo "File Already Open!" . PHP_EOL;
         }
