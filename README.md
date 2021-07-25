@@ -66,6 +66,9 @@
     <li>
       <a href="behavioral-chain-of-responsibility.php">مثال عن ال Chain of Responsibility</a>
     </li>
+    <li>
+      <a href="behavioral-command.php">مثال عن ال Command</a>
+    </li>
   </ul>
 </div>
 
