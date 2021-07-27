@@ -69,6 +69,9 @@
     <li>
       <a href="behavioral-command.php">مثال عن ال Command</a>
     </li>
+    <li>
+      <a href="behavioral-iterator.php">مثال عن ال Iterator</a>
+    </li>
   </ul>
 </div>
 
