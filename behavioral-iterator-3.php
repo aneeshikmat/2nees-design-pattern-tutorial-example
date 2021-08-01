@@ -4,11 +4,17 @@
  * 2nees.com
  */
 
+/**
+ * Collection Interface
+ */
 interface ItemsCollection {
     public function oddItem(): OddIndex;
     public function evenItem(): EvenIndex;
 }
 
+/**
+ * Concrete Collections
+ */
 class Countries implements ItemsCollection {
     private array $countriesList;
 
@@ -32,6 +38,9 @@ class Countries implements ItemsCollection {
     }
 }
 
+/**
+ * Concrete Collections
+ */
 class Countires2 {
     public function doMyIterate(\Iterator $iterator)
     {
@@ -41,7 +50,9 @@ class Countires2 {
     }
 }
 
-
+/**
+ * Concrete Iterators - \Iterator is Common Interface and its built-in in php
+ */
 class OddIndex implements \Iterator {
     private int $pointer = 0;
     private array $countriesList;
@@ -81,6 +92,9 @@ class OddIndex implements \Iterator {
     }
 }
 
+/**
+ * Concrete Iterators - \Iterator is Common Interface and its built-in in php
+ */
 class EvenIndex implements \Iterator {
     private int $pointer = 0;
     private array $countriesList;
@@ -120,6 +134,7 @@ class EvenIndex implements \Iterator {
     }
 }
 
+// Clients
 $list = [
     "Jordan", "Egypt", "Palestine", "Syria"
 ];
