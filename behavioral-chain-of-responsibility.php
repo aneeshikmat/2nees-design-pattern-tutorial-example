@@ -281,14 +281,14 @@ $order4 = new Order($user4, [$prod1, $prod2], 4);
 $checkIsLoggedInUser    = new CheckIsLoggedInUser();
 $checkUserRole          = new CheckUserRole();
 $checkProductQuantity   = new CheckProductQuantity();
-$AddLog                 = new AddLog();
+$addLog                 = new AddLog();
 $orderSummery           = new OrderSummery();
 
 // Set order of handler execute
 $checkIsLoggedInUser
     ->setNextHandler($checkUserRole)
     ->setNextHandler($checkProductQuantity)
-    ->setNextHandler($AddLog)
+    ->setNextHandler($addLog)
     ->setNextHandler($orderSummery);
 
 try {
