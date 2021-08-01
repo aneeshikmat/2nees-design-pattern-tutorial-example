@@ -76,6 +76,9 @@
 ||
       <a href="behavioral-iterator-3.php">مثال عن ال Iterator 3</a>
     </li>
+    <li>
+      <a href="behavioral-mediator.php">مثال عن ال Mediator</a>
+    </li>
   </ul>
 </div>
 
