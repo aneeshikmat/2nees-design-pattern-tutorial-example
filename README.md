@@ -73,6 +73,8 @@
       <a href="behavioral-iterator.php">مثال عن ال Iterator</a>
 ||
       <a href="behavioral-iterator-2.php">مثال عن ال Iterator 2</a>
+||
+      <a href="behavioral-iterator-3.php">مثال عن ال Iterator 3</a>
     </li>
   </ul>
 </div>
