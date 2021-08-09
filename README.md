@@ -79,6 +79,9 @@
     <li>
       <a href="behavioral-mediator.php">مثال عن ال Mediator</a>
     </li>
+    <li>
+      <a href="behavioral-memento.php">مثال عن ال Memento</a>
+    </li>
   </ul>
 </div>
 
