@@ -82,6 +82,9 @@
     <li>
       <a href="behavioral-memento.php">مثال عن ال Memento</a>
     </li>
+    <li>
+      <a href="behavioral-observer.php">مثال عن ال Observer</a>
+    </li>
   </ul>
 </div>
 
