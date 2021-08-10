@@ -112,6 +112,7 @@ class TicketOriginator
 
 /**
  * Class TicketConcreteMemento - this class Concrete for memento, implement method and contain infrastructure for store states...
+ * Important Note: This class must initialize from Constructor, Dont create a setter function!
  */
 class TicketConcreteMemento implements MementoTicket
 {
