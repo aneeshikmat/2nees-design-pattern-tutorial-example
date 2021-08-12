@@ -1,6 +1,6 @@
 <?php
 /**
- * This example just to simulate how Observer can be work
+ * This example just to simulate how Observer can be work And how we can build a group of events
  * 2nees.com
  */
 
