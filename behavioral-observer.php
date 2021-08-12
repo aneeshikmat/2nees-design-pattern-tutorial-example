@@ -4,6 +4,9 @@
  * 2nees.com
  */
 
+/**
+ * Class Restaurant - Publisher (Subject) - subscription infrastructure that lets new subscribers join/left
+ */
 class Restaurant implements SplSubject {
     private SplObjectStorage $observers;
     private int $tableNumber = 0;
@@ -55,6 +58,9 @@ class Restaurant implements SplSubject {
     }
 }
 
+/**
+ * Class Waiter - Concrete Subscribers - implement some action when notify received...
+ */
 class Waiter implements SplObserver {
     public function update(SplSubject $subject)
     {
@@ -65,6 +71,9 @@ class Waiter implements SplObserver {
     }
 }
 
+/**
+ * Class Kitchen - Concrete Subscribers - implement some action when notify received...
+ */
 class Kitchen implements SplObserver {
     public function update(SplSubject $subject)
     {
@@ -77,6 +86,9 @@ class Kitchen implements SplObserver {
     }
 }
 
+/**
+ * Class Accountant - Concrete Subscribers - implement some action when notify received...
+ */
 class Accountant implements SplObserver {
     public function update(SplSubject $subject)
     {
@@ -94,6 +106,7 @@ class Accountant implements SplObserver {
     }
 }
 
+// Client
 $restaurant = new Restaurant();
 $kitchen = new Kitchen();
 $waiter= new Waiter();

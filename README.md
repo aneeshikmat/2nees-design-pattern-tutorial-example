@@ -84,6 +84,8 @@
     </li>
     <li>
       <a href="behavioral-observer.php">مثال عن ال Observer</a>
+||
+      <a href="behavioral-observer-2.php">مثال عن ال Observer 2</a>
     </li>
   </ul>
 </div>
