@@ -186,4 +186,6 @@ $restaurant->customerSetOnTable();
 echo "=======================================" . PHP_EOL;
 $restaurant->customerSetOnTable();
 echo "=======================================" . PHP_EOL;
+$restaurant->detach($logger);
+$restaurant->detach($accountant, INVOICE_GROUP);
 $restaurant->customerSetOnTable();
