@@ -87,6 +87,7 @@ class Restaurant implements SplSubject {
         $this->tableNumber += 1;
 
         $this->notify(CUSTOMER_SET_DOWN);
+        // Call another logic...like step 2
         $this->createInvoice();
     }
 
@@ -94,6 +95,9 @@ class Restaurant implements SplSubject {
      * Logic set here, we add notify if customer set down on table
      */
     public function createInvoice(){
+        // do your logic...
+        echo "We are doing some actions..." . PHP_EOL;
+        // Notify
         $this->notify(INVOICE_GROUP);
     }
 
