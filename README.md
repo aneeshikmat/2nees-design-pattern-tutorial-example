@@ -90,6 +90,9 @@
     <li>
       <a href="behavioral-state.php">مثال عن ال State</a>
     </li>
+    <li>
+      <a href="behavioral-strategy.php">مثال عن ال Strategy</a>
+    </li>
   </ul>
 </div>
 
