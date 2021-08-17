@@ -4,10 +4,17 @@
  * 2nees.com
  */
 
+/**
+ * Interface EncryptStrategy - Strategy interface - Declare method to share it in all Concrete Strategy which call in context
+ */
 interface EncryptStrategy {
     public function encrypt($text): string;
 }
 
+/**
+ * Class EncryptedContext - This is the Context class, which its Reference to one of Concrete Strategy Class
+ ** and communicate is done via Strategy interface
+ */
 class EncryptedContext {
     private EncryptStrategy $encryptStrategy;
     private string $text;
@@ -42,6 +49,7 @@ class EncryptedContext {
     }
 }
 
+#region Concrete Strategy - these class will implement different variations of encrypt
 class MD5Encrypt implements EncryptStrategy {
     public function encrypt($text): string
     {
@@ -62,7 +70,9 @@ class Haval160Encrypt implements EncryptStrategy {
         return "haval160,4: " . hash("haval160,4", $text);
     }
 }
+#endregion
 
+// Client...
 $encrypt = new EncryptedContext(new SHA1Encrypt());
 $encrypt->setText("2nees.com");
 $encrypt->encryptText();
