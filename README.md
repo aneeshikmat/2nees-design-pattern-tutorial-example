@@ -93,6 +93,9 @@
     <li>
       <a href="behavioral-strategy.php">مثال عن ال Strategy</a>
     </li>
+    <li>
+      <a href="behavioral-template-method.php">مثال عن ال Template Method</a>
+    </li>
   </ul>
 </div>
 
