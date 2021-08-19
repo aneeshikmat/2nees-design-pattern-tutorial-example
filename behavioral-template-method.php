@@ -4,7 +4,11 @@
  * 2nees.com
  */
 
+/**
+ * Class CoffeeMachine - The Abstract Class defines a template method that contains a skeleton of some algorithm
+ */
 abstract class CoffeeMachine {
+    // This is the template which its define the skeleton of an algorithm - you cant update or change this template from subclass
     final public function prepareCoffee(): void {
         echo "Preparing Start..." . PHP_EOL;
         echo $this->addCup() . PHP_EOL;
@@ -23,6 +27,7 @@ abstract class CoffeeMachine {
     }
 }
 
+#region Concrete Template Method - these class will implement different variations of Coffee type base on CoffeeMachine
 class Coffee extends CoffeeMachine {
     protected function addWater(): string
     {
@@ -77,6 +82,7 @@ class IceCoffee extends CoffeeMachine {
         return "Add Plastic Cub!";
     }
 }
+#endregion
 
 // Client
 $coffee = new Coffee();
