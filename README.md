@@ -18,6 +18,9 @@
       <a href="basic-example-for-concept/aggregation.php">مثال عن ال Aggregation Relationship</a>
     </li>
     <li>
+      <a href="basic-example-for-concept/composition.php">مثال عن ال Composition Relationship</a>
+    </li>
+    <li>
       <a href="creational-factory-method.php">مثال عن ال Factory Method</a>
     </li>
     <li>
