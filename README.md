@@ -97,7 +97,7 @@
       <a href="behavioral-template-method.php">مثال عن ال Template Method</a>
     </li>
     <li>
-      <a href="behavioral-template-method.php">مثال عن ال Visitor</a>
+      <a href="behavioral-visitor.php">مثال عن ال Visitor</a>
     </li>
   </ul>
 </div>
