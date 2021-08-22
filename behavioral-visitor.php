@@ -261,6 +261,13 @@ $carInsurance = new CarInsurance();
 $bankInsurance = new BankInsurance();
 $hospitalInsurance = new HospitalInsurance();
 
+// Basic
+echo $homeInsurance->getContracts() . PHP_EOL;
+echo $carInsurance->getContracts() . PHP_EOL;
+echo $bankInsurance->getContracts() . PHP_EOL;
+echo $hospitalInsurance->getContracts() . PHP_EOL;
+echo "====================Default Implementation===========================" . PHP_EOL;
+
 // Test Scenario 1
 $covid1 = new CovidCondition(true);
 $homeInsurance->accept($covid1);
