@@ -4,7 +4,7 @@
  * 2nees.com
  */
 
-class Collage {
+class CollageA {
     private string $name;
     /**
      * @var Teacher[]
@@ -88,7 +88,7 @@ $std1 = new Student("Anees");
 $std2 = new Student("Taher");
 $std3 = new Student("Saed");
 
-$collage = new Collage("Information Technology", [$tech1, $tech2], [$std1, $std2, $std3]);
+$collage = new CollageA("Information Technology", [$tech1, $tech2], [$std1, $std2, $std3]);
 $collage->printCollageDetails();
 unset($collage);
 echo $tech1->getName() . PHP_EOL;
